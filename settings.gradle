@@ -1,0 +1,2 @@
+rootProject.name = "JustCart_ver2"
+include ':app'

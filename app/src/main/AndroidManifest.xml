@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.JustCart_ver4">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    //블루투스 권한 설정
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- If your app targets Android 9 or lower, you can declare ACCESS_COARSE_LOCATION instead. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_main3"
+        android:roundIcon="@mipmap/ic_logo_btn_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JustCart_ver4"
+        android:label="그냥담아"
+        android:usesCleartextTraffic="true"
+        android:name="knormal.justcart.JustCart_ver4.BeaconReferenceApplication">
+        <activity
+            android:name="knormal.justcart.JustCart_ver4.RecommActivity"
+            android:exported="true" />
+        <activity android:name="knormal.justcart.JustCart_ver4.Snack"/>
+        <activity android:name="knormal.justcart.JustCart_ver4.CreateQR" />
+        <activity android:name="knormal.justcart.JustCart_ver4.MypageActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.Frag_event3Activity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.Frag_event2Activity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.Frag_event1Activity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.RegisterActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.LoginActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.MainActivity"/>
+
+        <activity android:name="knormal.justcart.JustCart_ver4.EventActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.SearchActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.CheckActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.PayActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.ShopActivity2" />
+        <activity android:name="knormal.justcart.JustCart_ver4.Fruit" />
+        <activity android:name="knormal.justcart.JustCart_ver4.Meat" />
+        <activity android:name="knormal.justcart.JustCart_ver4.Drink" />
+        <activity android:name="knormal.justcart.JustCart_ver4.NoodleActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.FrozenFood" />
+        <activity android:name="knormal.justcart.JustCart_ver4.FreshActivity2" />
+        <activity android:name="knormal.justcart.JustCart_ver4.FreshBeaconActivity" />
+        <activity android:name="knormal.justcart.JustCart_ver4.BluetoothActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name="org.altbeacon.beacon.service.BeaconService"
+            tools:node="replace">
+            <meta-data android:name="longScanForcingEnabled" android:value="true"/>
+        </service>
+    </application>
+
+</manifest>
